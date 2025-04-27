@@ -1,0 +1,51 @@
+.calendar-container {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 500px;
+  }
+
+
+  .react-calendar {
+    border: none;
+    border-radius: 20px; 
+    background-color: #E6E6FA; /* Light lavender */
+    padding: 1rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  }
+  
+  /* Remove default tile borders */
+  .react-calendar__tile {
+    border: none;
+  }
+  
+  /* Circle style for each date */
+  .react-calendar__tile {
+    border-radius: 50%; /* Make date tiles circular */
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+  
+  .tile-happy {
+    background: #73f38b !important;
+  }
+  
+  .tile-sad {
+    background: #f35151 !important;
+  }
+  
+  .tile-anxious {
+    background: #e9ed6e !important;
+  }
+  
+  .tile-neutral {
+    background: #5fc4e5 !important;
+  }
+  
+  .react-calendar__tile:hover {
+    background-color: #d8bfd8; /* Lighter lavender on hover */
+    color: black;
+  }
