@@ -16,6 +16,10 @@ body {
     
 }
 
+.ul.nav-menu {
+    display: flex;
+}
+
 .logo-menu {
     display: flex;
     align-items: center;
