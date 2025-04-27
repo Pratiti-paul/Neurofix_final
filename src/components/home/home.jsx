@@ -1,6 +1,6 @@
 import React from 'react';
 import './home.css'; 
-import MoodCalendar from "../moodcalender/moodcalendar"; 
+import MoodCalendar from "../moodcalendar/moodcalendar"; 
 
 function Home() {
   return (
