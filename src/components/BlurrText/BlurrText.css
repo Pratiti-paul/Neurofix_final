@@ -1,0 +1,58 @@
+.blur-text {
+    display: inline-block;
+    font-size: 150px;
+  }
+  
+  .animated {
+    animation: blurAndFade 5s ease-in-out infinite;  /* Infinite loop */
+  }
+  
+  @keyframes blurAndFade {
+    0% {
+      filter: blur(5px);
+      opacity: 0.5;
+    }
+    50% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+    100% {
+      filter: blur(5px);
+      opacity: 0.5;
+    }
+  }
+  
+  .word, .letter {
+    display: inline-block;
+  }
+  
+  .word {
+    display: inline;
+  }
+  
+  .letter {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInOut 2s ease-in-out infinite;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .top {
+    transform: translateY(-10px);
+  }
+  
+  .bottom {
+    transform: translateY(10px);
+  }
+  

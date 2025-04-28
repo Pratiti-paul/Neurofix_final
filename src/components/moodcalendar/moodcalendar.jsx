@@ -6,6 +6,7 @@ import './moodcalendar.css';
 function MoodCalendar() {
   const [moods, setMoods] = useState({});
   const [selectedDate, setSelectedDate] = useState(null);
+  const [showMoodSelector, setShowMoodSelector] = useState(false);
 
   useEffect(() => {
     const storedMoods = JSON.parse(localStorage.getItem('moods')) || {};
@@ -13,12 +14,18 @@ function MoodCalendar() {
   }, []);
 
   const handleDayClick = (date) => {
-    const mood = prompt('Enter your mood (Happy, Sad, Anxious, Neutral):');
-    if (mood) {
-      const updatedMoods = { ...moods, [date.toDateString()]: mood };
+    setSelectedDate(date);
+    setShowMoodSelector(true);
+  };
+
+  const handleMoodSelect = (mood) => {
+    if (selectedDate) {
+      const updatedMoods = { ...moods, [selectedDate.toDateString()]: mood };
       setMoods(updatedMoods);
       localStorage.setItem('moods', JSON.stringify(updatedMoods));
     }
+    setShowMoodSelector(false);
+    setSelectedDate(null);
   };
 
   const tileClassName = ({ date, view }) => {
@@ -37,6 +44,19 @@ function MoodCalendar() {
         onClickDay={handleDayClick}
         tileClassName={tileClassName}
       />
+
+      {showMoodSelector && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <h3>Select Your Mood</h3>
+            <button onClick={() => handleMoodSelect('Happy')}>😊 Happy</button>
+            <button onClick={() => handleMoodSelect('Sad')}>😢 Sad</button>
+            <button onClick={() => handleMoodSelect('Anxious')}>😟 Anxious</button>
+            <button onClick={() => handleMoodSelect('Neutral')}>😐 Neutral</button>
+            <button className="cancel-button" onClick={() => setShowMoodSelector(false)}>Cancel</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

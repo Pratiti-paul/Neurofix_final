@@ -1,4 +1,17 @@
 .home-container{
     text-align: center;
+    padding-top: 150px;
+    color: #2D2A3E ;
+    text-align: center;
+}
+
+p{
+    padding: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    color: #2D2A3E ;
+    text-align: center;
+    padding-bottom: 90px;
+    /* font-weight: bold; */
 }
 

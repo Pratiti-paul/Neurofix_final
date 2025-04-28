@@ -1,5 +1,6 @@
 body {
     background-color: #FFD6E8;
+    /* font-size: 50px; */
 }
 
 .navbar {
@@ -12,7 +13,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    /* max-width: 1200px; */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
@@ -24,9 +28,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 0px;
+    /* padding-left: 0px;
     margin-left: 0; 
-    padding-left: 0;
+    padding-left: 0; */
 }
 
 .logo {
@@ -40,6 +44,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 30px;
+    
 }
 
 .nav-item {
@@ -60,9 +65,9 @@ body {
     font-size: 24px;
     color: #333333;
     cursor: pointer;
-    padding-right: 0px;
+    /* padding-right: 0px;
     margin-right: 0; 
-    padding-right: 0;
+    padding-right: 0; */
     /* margin-left: auto;  */
 }
 
