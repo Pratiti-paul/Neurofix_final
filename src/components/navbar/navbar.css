@@ -1,12 +1,17 @@
 body {
     background-color: #FFD6E8;
     /* font-size: 50px; */
+    
+
 }
 
 .navbar {
     background-color: #f5b6d1; 
     border: none;
     padding: 15px 20px;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-size: 50px; */
 }
 
 .nav-container {
@@ -31,7 +36,9 @@ body {
     /* padding-left: 0px;
     margin-left: 0; 
     padding-left: 0; */
+    font-size: 50px
 }
+
 
 .logo {
     color: #333333;
