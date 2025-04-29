@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "./App.css";
-// import QuoteGenerator from "./components/QuoteGenerator/QuoteGenerator";
 import 'font-awesome/css/font-awesome.min.css';
 import Footer from "./components/footer/footer";
 import Navbar from "./components/navbar/navbar";

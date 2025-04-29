@@ -15,3 +15,11 @@ p{
     /* font-weight: bold; */
 }
 
+.calm-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  
+

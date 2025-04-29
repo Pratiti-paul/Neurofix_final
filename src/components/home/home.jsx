@@ -2,7 +2,12 @@ import React from 'react';
 import './home.css'; 
 import MoodCalendar from "../moodcalendar/moodcalendar"; 
 import QuoteGenerator from "../QuoteGenerator/QuoteGenerator";
-import BlurText from "../BlurrText/BlurrText";  
+import BlurrText from "../BlurrText/BlurrText";  
+import { Player } from '@lottiefiles/react-lottie-player';
+import animation from "../../assets/animation.json";
+
+
+
 
 
 
@@ -16,7 +21,7 @@ function Home() {
     <div className="home-page">
       <div className="home-container">
         <div className="text-section">
-        <BlurText
+        <BlurrText
             text="Welcome to NeuroFix"
             delay={150}
             animateBy="words"  
@@ -25,6 +30,14 @@ function Home() {
             className="text-2xl mb-8"
           />
           <p>Track your mental health and moods with us.</p>
+          <div className="calm-animation">
+            <Player
+              autoplay
+              loop
+              src={animation}
+              style={{ height: '250px', width: '400px' }}
+            />
+          </div>
         </div>
         <div className="calendar-section">
           <MoodCalendar />
