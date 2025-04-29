@@ -41,6 +41,7 @@ function MoodCalendar() {
   return (
     <div className="calendar-container">
       <Calendar
+        key={JSON.stringify(moods)}
         onClickDay={handleDayClick}
         tileClassName={tileClassName}
       />
