@@ -83,6 +83,169 @@
     justify-content: center;
   }
 
+  .legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding-left: 250px;
+    padding-top: 100px;
+    
+  }
+
+  /* .legend:hover{
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+  } */
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium';
+  }
+
+    /* .legend-item:hover {
+        box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+        border-radius: 10px;
+        padding: 5px;
+        background-color: #f0f0f0;
+        transition: background-color 0.3s ease;
+    }
+   */
+  .legend-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+  }
+
+
+  
+  .legend-box.happy {
+    background-color: #0be825bd;
+  }
+
+.legend-box.happy:hover {
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+}
+  
+  .legend-box.sad {
+    background-color: #db2020a5;
+  }
+  
+  .legend-box.sad:hover {
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+}
+  .legend-box.anxious {
+    background-color: #33d9dfb3;
+  }
+  
+  .legend-box.anxious:hover {
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+}
+
+  .legend-box.neutral {
+    background-color: #ebeb08c7;
+  }
+
+  .legend-box.neutral:hover {
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+}
+
+
+
+
+.quote-generator-section {
+    padding: 80px 20px 100px;
+    /* background: linear-gradient(to bottom, #f5b6d1 0%, #ffffff 100%); */
+    text-align: center;
+  }
+  
+  .quote-heading {
+    font-size: 70px;
+    color: #332c5b;
+    font-family: Georgia, serif;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .quote-subheading {
+    font-size: 40px;
+    color: #4c408e;
+    font-family: 'Franklin Gothic Medium';
+    margin-bottom: 20px;
+  }
+  
+  /* .quote-heading::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #ff69b4;
+    margin: 15px auto 0;
+    border-radius: 2px;
+  }
+   */
+  /* #quote-text {
+    font-size: 30px;
+    font-style: italic;
+    color: #2D2A3E;
+    transition: opacity 0.3s ease-in;
+    min-height: 60px;
+    margin: 30px 0;
+    padding: 0 20px;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  } */
+
+
+  /* .mood-selector{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+  }
+
+  .select-mood{
+    /* font-size:850px;
+    height: 60px;
+    width: 150px;
+    color: #4c408e;
+    font-family: 'Franklin Gothic Medium';
+    margin-bottom: 20px;
+    border-radius: 5px;
+  } */ */
+
+  .quote-generator-section button {
+    padding: 12px 30px;
+    /* background-color: #551535; */
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Franklin Gothic Medium';
+  }
+  
+  .quote-generator-section button:hover {
+    background-color: #e0559c;
+  }
+
+  .generate-button{
+    height: 50px;
+    width: 350px;
+  }
+
+
+/* .quote-display{
+    font-size: 60px;
+} */
+  
+
+
+  
   
   
   

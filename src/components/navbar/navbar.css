@@ -1,13 +1,12 @@
-body {
-    background-color: #FFD6E8;
+/* body {
+    background-color: #d8e3e7;
     /* font-size: 50px; */
     
 
-}
 
 .navbar {
-    background-color: #f5b6d1; 
-    border: none;
+    background-color: #afccd6; 
+    /* border: none; */
     padding: 15px 20px;
     width: 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

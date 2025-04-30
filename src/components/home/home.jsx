@@ -7,12 +7,9 @@ import animation from "../../assets/animation.json";
 
 
 
-
-
-
-const handleAnimationComplete = () => {
-  console.log('Animation completed!');
-};
+// const handleAnimationComplete = () => {
+//   console.log('Animation completed!');
+// };
 
 function Home() {
 
@@ -43,14 +40,36 @@ function Home() {
           </ul>
           <div className="calendar-section">
           <MoodCalendar />
+          <div className="legend">
+            <div className="legend-item">
+                <div className="legend-box happy"></div> Happy
+              </div>
+              <div className="legend-item">
+                <div className="legend-box sad"></div> Sad
+              </div>
+              <div className="legend-item">
+                <div className="legend-box anxious"></div> Anxious
+              </div>
+              <div className="legend-item">
+                <div className="legend-box neutral"></div> Neutral
+              </div>
+            </div>
         </div>
         </div>
         {/* <div className="calendar-section">
           <MoodCalendar />
         </div> */}
-        <div className="quote-generator">
+        {/* <div className="quote-generator">
             <QuoteGenerator /> 
+        </div> */}
+        <div className="quote-generator-section">
+          <h2 className="quote-heading">Feeling stuck?</h2>
+          <h2 className="quote-subheading">Get inspired with a random quote!</h2>
+          <QuoteGenerator />
         </div>
+
+   
+
       </div>
     </div>
   );
