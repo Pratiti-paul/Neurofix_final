@@ -1,9 +1,19 @@
 import { Link } from 'react-router-dom';
+import './selfcare.css';
+import MeditationTimer from "../meditationtimer/meditationtimer"; 
+import MusicPlayer from "../musicplayer/musicplayer";
+
+
 
 function Selfcare() {
     return (
       <div>
-        <h2>Selfcare Page</h2>
+        <div className="meditationtimer">
+        <MeditationTimer />
+        </div>
+        <div className="musicplayer">
+        <MusicPlayer />
+        </div>
       </div>
     );
   }
