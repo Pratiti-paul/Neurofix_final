@@ -1,0 +1,28 @@
+
+
+   start-button-wrapper {
+    padding-top: 60px;
+    padding-bottom: 40px;
+   }
+
+
+  .start-button {
+    padding: 30px;
+    background-color: #736cd4;
+    color: rgb(223, 205, 205);
+    font-size: 1.125rem;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Franklin Gothic Medium';
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+  }
+  .start-button:hover {
+    background-color: #6c5ce7;
+  }
+  
+  
