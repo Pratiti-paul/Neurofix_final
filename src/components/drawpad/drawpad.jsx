@@ -5,7 +5,6 @@ function DrawPad() {
   const canvasRef = useRef(null);
   const [ctx, setCtx] = useState(null);
   const [drawing, setDrawing] = useState(false);
-  const [tool, setTool] = useState('pen');
   const [color, setColor] = useState('#000000');
 
   useEffect(() => {
@@ -20,17 +19,9 @@ function DrawPad() {
 
   useEffect(() => {
     if (!ctx) return;
-    if (tool === 'pen') {
-      ctx.strokeStyle = color;
-      ctx.lineWidth = 4;
-    } else if (tool === 'pencil') {
-      ctx.strokeStyle = color;
-      ctx.lineWidth = 2;
-    } else if (tool === 'eraser') {
-      ctx.strokeStyle = '#f8f8f8'; // same as canvas background
-      ctx.lineWidth = 12;
-    }
-  }, [tool, color, ctx]);
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 2; // Pencil thickness
+  }, [color, ctx]);
 
   const startDrawing = ({ nativeEvent }) => {
     const { offsetX, offsetY } = nativeEvent;
@@ -61,29 +52,14 @@ function DrawPad() {
 
       <div className="drawpad-controls">
         <label>
-          Tool:
-          <select
-            value={tool}
-            onChange={(e) => setTool(e.target.value)}
-            className="drawpad-select"
-          >
-            <option value="pen">Pen</option>
-            <option value="pencil">Pencil</option>
-            <option value="eraser">Eraser</option>
-          </select>
+          Color:
+          <input
+            type="color"
+            value={color}
+            onChange={(e) => setColor(e.target.value)}
+            className="drawpad-color"
+          />
         </label>
-
-        {(tool === 'pen' || tool === 'pencil') && (
-          <label>
-            Color:
-            <input
-              type="color"
-              value={color}
-              onChange={(e) => setColor(e.target.value)}
-              className="drawpad-color"
-            />
-          </label>
-        )}
 
         <button className="drawpad-clear" onClick={clearCanvas}>Clear</button>
       </div>
