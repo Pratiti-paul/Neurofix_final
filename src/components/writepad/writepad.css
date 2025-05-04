@@ -1,0 +1,44 @@
+.journal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+  }
+  
+  .journal-textarea {
+    width: 80%;
+    height: 500px;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    resize: vertical;
+    background-color: #9eb8ba;
+  }
+
+.heading {
+  color: #293303;
+  font-size: 40px;
+  font-family:'Franklin Gothic Medium';
+  }
+
+
+   .journal-button {
+    background-color: #036154;
+    color: #f4f7f5;
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .journal-textarea::placeholder {
+    color: #0f1301; 
+    opacity: 1;  
+  }
+  
