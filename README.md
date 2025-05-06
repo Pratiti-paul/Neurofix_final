@@ -1,12 +1,20 @@
-# React + Vite
+# Mental Health Tracker Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a web-based application designed to help users track and manage their mental health. It provides tools for journaling, mood tracking, and accessing helpful resources to promote mental well-being.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Mood Tracking**: Log your daily mood and visualize trends over time.
+- **Journaling**: Write and save personal journal entries to reflect on your thoughts and feelings.
+- **Resource Library**: Access curated articles, videos, and tips for mental health improvement.
+- **Reminders**: Set reminders to log your mood or write journal entries.
+- **Secure Data**: All user data is securely stored and protected.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React with Vite for fast development and HMR.
+- **Styling**: Tailwind CSS for a modern and responsive design.
+
+## Disclaimer
+
+This application is not a substitute for professional mental health care. If you are experiencing a mental health crisis, please seek help from a licensed professional or contact emergency services.

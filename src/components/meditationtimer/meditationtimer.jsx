@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './MeditationTimer.css';
 
 const MeditationTimer = () => {
-  const [inputMinutes, setInputMinutes] = useState(5);
-  const [inputSeconds, setInputSeconds] = useState(0);
+  const [duration, setDuration] = useState(300); // default 5 minutes
   const [remainingTime, setRemainingTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
-  const [hasStarted, setHasStarted] = useState(false);
 
   useEffect(() => {
     let timer;
@@ -28,63 +25,38 @@ const MeditationTimer = () => {
   };
 
   const startMeditation = () => {
-    const totalSeconds = parseInt(inputMinutes) * 60 + parseInt(inputSeconds);
-    if (totalSeconds <= 0) return alert("Please set a valid time.");
-    setRemainingTime(totalSeconds);
+    setRemainingTime(duration);
     setIsRunning(true);
-    setHasStarted(true);
-  };
-
-  const pauseMeditation = () => {
-    setIsRunning(false);
-  };
-
-  const stopMeditation = () => {
-    setIsRunning(false);
-    setHasStarted(false);
-    setRemainingTime(0);
   };
 
   return (
-    <div className="meditation-container">
-      <h2 className="meditation-title">Meditation Tracker</h2>
-
-      <div className="meditation-inputs">
-        <label>Minutes: </label>
-        <input
-          type="number"
-          min="0"
-          value={inputMinutes}
-          onChange={(e) => setInputMinutes(e.target.value)}
-        />
-        <label>Seconds: </label>
-        <input
-          type="number"
-          min="0"
-          max="59"
-          value={inputSeconds}
-          onChange={(e) => setInputSeconds(e.target.value)}
-        />
+    <div className="p-4 bg-blue-50 rounded-xl shadow-md text-center max-w-md mx-auto mt-6">
+      <h2 className="text-xl font-semibold mb-4">Meditation Tracker</h2>
+      
+      <div className="mb-4">
+        <label className="mr-2 font-medium">Choose duration:</label>
+        <select
+          value={duration}
+          onChange={(e) => setDuration(Number(e.target.value))}
+          className="p-2 rounded border"
+        >
+          <option value={300}>5 minutes</option>
+          <option value={600}>10 minutes</option>
+          <option value={900}>15 minutes</option>
+        </select>
       </div>
 
-      <div className="meditation-controls">
-        {!hasStarted || !isRunning ? (
-          <button onClick={startMeditation} className="meditation-button">
-            {hasStarted ? 'Resume' : 'Start'}
-          </button>
-        ) : (
-          <button onClick={pauseMeditation} className="meditation-button">
-            Pause
-          </button>
-        )}
-        {hasStarted && (
-          <button onClick={stopMeditation} className="meditation-button stop">
-            Stop
-          </button>
-        )}
-      </div>
+      <button
+        onClick={startMeditation}
+        className="bg-teal-600 hover:bg-teal-700 text-white py-2 px-4 rounded"
+        disabled={isRunning}
+      >
+        {isRunning ? 'Meditating...' : 'Start Meditation'}
+      </button>
 
-      <p className="meditation-timer">Timer: {formatTime(remainingTime)}</p>
+      <p className="mt-4 text-lg font-mono">
+        Timer: {formatTime(remainingTime)}
+      </p>
     </div>
   );
 };
