@@ -1,29 +1,21 @@
-main{
-  background-color: #d8e3e7;
-}
-
-/* Prevent horizontal scroll globally */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* 💥 This line prevents horizontal scroll */
+  overflow-x: hidden;
 }
 
-/* Set the background */
 main {
   background-color: #d8e3e7;
   flex: 1;
   width: 100%;
-  overflow-x: hidden; /* Just in case */
+  overflow-x: hidden;
 }
 
-/* Ensure root stretches full height */
 #root {
   height: 100%;
 }
 
-/* Ensure content inside root fills correctly */
 #root > div {
   display: flex;
   flex-direction: column;
@@ -31,14 +23,12 @@ main {
   width: 100%;
 }
 
-/* Body layout */
 body {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-/* Footer */
 footer {
   background-color: #f5b6d1;
   text-align: center;

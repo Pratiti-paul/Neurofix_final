@@ -2,9 +2,11 @@ import React from 'react';
 import Writepad from '../writepad/writepad'; 
 import MoodCalendar from "../moodcalendar/moodcalendar"; 
 import QuoteGenerator from "../QuoteGenerator/QuoteGenerator";
+
 import './moodify.css'; 
 
 function Moodify() {
+  const scrollRef = React.useRef(null);
   return (
     <div>
       <div ref={scrollRef} className="tracker-intro">

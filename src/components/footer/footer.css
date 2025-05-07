@@ -2,26 +2,25 @@
     background-color: #afccd6; 
     color: #444c2d;
     text-align: center;
-    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 40px;
     position: relative;
-    bottom: 0;
-    width: 100%;
+    /* font-family: Georgia;
+    font-size: 46px; */
   }
-  
-  .App {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 
-  }
+
   .footer-container {
     max-width: 1200px;
     margin: 0 auto;
+    font-family: Georgia;
+    font-size: 46px;
   }
   
   .footer-text {
     margin-bottom: 10px;
-    font-size: 16px;
+    font-family: Georgia;
+    font-size: 30px;
   }
   
   .social-icons {
@@ -31,14 +30,9 @@
   }
   
   .social-icons a {
-    color: #444c2d;
+    color: #333333;
     font-size: 24px;
     text-decoration: none;
   }
-  
-  /* .social-icons a:hover {
-    color: #D7263D; 
-  }
-   */
- 
+
   
