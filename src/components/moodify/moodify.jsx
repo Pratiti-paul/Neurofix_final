@@ -1,5 +1,4 @@
 import React from 'react';
-import Writepad from '../writepad/writepad'; 
 import MoodCalendar from "../moodcalendar/moodcalendar"; 
 import QuoteGenerator from "../QuoteGenerator/QuoteGenerator";
 
@@ -35,14 +34,7 @@ function Moodify() {
         <h2 className="quote-subheading">Get inspired with a random quote!</h2>
         <QuoteGenerator />
       </div>
-      <>
-        <div className="journal-container">
-          <Writepad />
-        </div>
-        {/* <div className="drawpad-container">
-          <DrawPad />
-        </div> */}
-      </>
+
     </div>
   );
 }
