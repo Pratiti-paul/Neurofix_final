@@ -1,66 +1,35 @@
-.meditation-container {
-    max-width: 400px;
-    margin: 2rem auto;
-    background-color: #e0f7fa;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  .meditation-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .meditation-inputs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 1rem;
-  }
-  
-  .meditation-inputs input {
-    width: 60px;
-    padding: 0.4rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    text-align: center;
-  }
-  
-  .meditation-controls {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 1rem;
-  }
-  
-  .meditation-button {
-    background-color: #26a69a;
-    color: white;
-    border: none;
-    padding: 0.6rem 1rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .meditation-button:hover {
-    background-color: #1d857d;
-  }
-  
-  .meditation-button.stop {
-    background-color: #ef5350;
-  }
-  
-  .meditation-button.stop:hover {
-    background-color: #c62828;
-  }
-  
-  .meditation-timer {
-    font-size: 1.25rem;
-    font-family: monospace;
-  }
-  
+.meditation-tracker {
+  text-align: center;
+  background-color: #f0f7f4;
+  padding: 1.5rem;
+  border: 2px solid #aacfcf;
+  border-radius: 10px;
+  width: 300px;
+  margin: 20px auto;
+  font-family: sans-serif;
+}
+
+.timer-display {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.controls button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.done-message {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: green;
+}

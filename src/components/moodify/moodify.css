@@ -1,0 +1,120 @@
+.tracker-intro {
+    margin: 60px auto 30px;
+    max-width: 2000px;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .tracker-heading {
+    font-size: 60px;
+    color: #a90707;
+    /* font-weight: 700; */
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium';
+  }
+  
+  .tracker-text {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #4c408e;
+    font-family: 'Franklin Gothic Medium';
+    line-height: 1.6;
+  }
+  
+  .tracker-tips {
+    list-style: none;
+    font-family: 'Franklin Gothic Medium';
+    /* padding: 0; */
+    font-size: 30px;
+    color: #4c408e;
+    margin-top: 10px;
+  }
+  
+  .tracker-tips li {
+    margin-bottom: 10px;
+  }
+  
+  .calendar-section {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding-left: 250px;
+    padding-top: 100px;
+    
+  }
+
+
+   
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium';
+  }
+
+  .legend-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+  }
+
+
+  
+  .legend-box.happy {
+    background-color: #0be825bd;
+  }
+
+.legend-box.happy:hover {
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+}
+  
+  .legend-box.sad {
+    background-color: #db2020a5;
+  }
+  
+  .legend-box.sad:hover {
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+}
+  .legend-box.anxious {
+    background-color: #33d9dfb3;
+  }
+  
+  .legend-box.anxious:hover {
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+}
+
+  .legend-box.neutral {
+    background-color: #ebeb08c7;
+  }
+
+  .legend-box.neutral:hover {
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+}
+
+
+
+
+.quote-generator-section {
+    padding: 80px 20px 100px;
+    /* background: linear-gradient(to bottom, #f5b6d1 0%, #ffffff 100%); */
+    text-align: center;
+  }
+  
+  .quote-heading {
+    font-size: 70px;
+    color: #332c5b;
+    font-family: Georgia, serif;
+    margin-bottom: 30px;
+    position: relative;
+  }

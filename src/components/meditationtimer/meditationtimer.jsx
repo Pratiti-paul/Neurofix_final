@@ -1,64 +1,47 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import './meditationtimer.css';
 
-const MeditationTimer = () => {
-  const [duration, setDuration] = useState(300); // default 5 minutes
-  const [remainingTime, setRemainingTime] = useState(0);
+const MeditationTracker = () => {
+  const INITIAL_TIME = 10 * 60;
+  const [timeLeft, setTimeLeft] = useState(INITIAL_TIME);
   const [isRunning, setIsRunning] = useState(false);
+  const timerRef = useRef(null);
 
   useEffect(() => {
-    let timer;
-    if (isRunning && remainingTime > 0) {
-      timer = setInterval(() => {
-        setRemainingTime((prev) => prev - 1);
+    if (isRunning && timeLeft > 0) {
+      timerRef.current = setInterval(() => {
+        setTimeLeft(prev => prev - 1);
       }, 1000);
-    } else if (remainingTime === 0 && isRunning) {
-      setIsRunning(false);
-      alert('Meditation session complete! 🧘');
+    } else {
+      clearInterval(timerRef.current);
     }
-    return () => clearInterval(timer);
-  }, [isRunning, remainingTime]);
 
-  const formatTime = (seconds) => {
-    const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
-    const secs = (seconds % 60).toString().padStart(2, '0');
-    return `${mins}:${secs}`;
+    return () => clearInterval(timerRef.current);
+  }, [isRunning, timeLeft]);
+
+  const formatTime = (secs) => {
+    const minutes = Math.floor(secs / 60);
+    const seconds = secs % 60;
+    return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
   };
 
-  const startMeditation = () => {
-    setRemainingTime(duration);
-    setIsRunning(true);
+  const resetTimer = () => {
+    setIsRunning(false);
+    setTimeLeft(INITIAL_TIME);
   };
 
   return (
-    <div className="p-4 bg-blue-50 rounded-xl shadow-md text-center max-w-md mx-auto mt-6">
-      <h2 className="text-xl font-semibold mb-4">Meditation Tracker</h2>
-      
-      <div className="mb-4">
-        <label className="mr-2 font-medium">Choose duration:</label>
-        <select
-          value={duration}
-          onChange={(e) => setDuration(Number(e.target.value))}
-          className="p-2 rounded border"
-        >
-          <option value={300}>5 minutes</option>
-          <option value={600}>10 minutes</option>
-          <option value={900}>15 minutes</option>
-        </select>
+    <div className="meditation-tracker">
+      <h2>Meditation Timer</h2>
+      <div className="timer-display">{formatTime(timeLeft)}</div>
+      <div className="controls">
+        <button onClick={() => setIsRunning(true)} disabled={isRunning || timeLeft === 0}>Start</button>
+        <button onClick={() => setIsRunning(false)} disabled={!isRunning}>Pause</button>
+        <button onClick={resetTimer}>Reset</button>
       </div>
-
-      <button
-        onClick={startMeditation}
-        className="bg-teal-600 hover:bg-teal-700 text-white py-2 px-4 rounded"
-        disabled={isRunning}
-      >
-        {isRunning ? 'Meditating...' : 'Start Meditation'}
-      </button>
-
-      <p className="mt-4 text-lg font-mono">
-        Timer: {formatTime(remainingTime)}
-      </p>
+      {timeLeft === 0 && <p className="done-message">🧘 Time's up! Great job!</p>}
     </div>
   );
 };
 
-export default MeditationTimer;
+export default MeditationTracker;

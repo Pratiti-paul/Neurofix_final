@@ -17,7 +17,7 @@ function Navbar() {
                         <Link to="/" className="nav-links" onClick={() => setMenuOpen(false)}>Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/journal" className="nav-links" onClick={() => setMenuOpen(false)}>Journal</Link>
+                        <Link to="/moodify" className="nav-links" onClick={() => setMenuOpen(false)}>Moodify</Link>
                     </li>
                     <li className="nav-item">
                         <Link to="/selfcare" className="nav-links" onClick={() => setMenuOpen(false)}>Self-Care</Link>

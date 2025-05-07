@@ -3,7 +3,7 @@ import "./App.css";
 import 'font-awesome/css/font-awesome.min.css';
 import Footer from "./components/footer/footer";
 import Navbar from "./components/navbar/navbar";
-import Journal from "./components/journal/journal"; 
+import Moodify from "./components/moodify/moodify"; 
 import Selfcare from "./components/selfcare/selfcare"; 
 import Home from "./components/home/home";
 import About from "./components/about/about";
@@ -16,7 +16,7 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/journal" element={<Journal />} />   
+              <Route path="/moodify" element={<Moodify />} />   
               <Route path="/selfcare" element={<Selfcare />} />
               <Route path="/about" element={<About />} />
             </Routes>

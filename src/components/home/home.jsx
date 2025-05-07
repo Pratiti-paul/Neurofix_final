@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import './home.css'; 
-import MoodCalendar from "../moodcalendar/moodcalendar"; 
-import QuoteGenerator from "../QuoteGenerator/QuoteGenerator";
+// import MoodCalendar from "../moodcalendar/moodcalendar"; 
+// import QuoteGenerator from "../QuoteGenerator/QuoteGenerator";
 import { Player } from '@lottiefiles/react-lottie-player';
 import animation from "../../assets/animation.json";
 import StartButton from "../startbutton/startbutton";
@@ -36,7 +36,7 @@ function Home() {
           </div>
         </div>
 
-        {/* ✅ Scrolls here when button clicked */}
+       
         <div ref={scrollRef} className="tracker-intro">
           <p className="tracker-text">
             Start by logging your daily mood below. Click on any date to select how you're feeling...

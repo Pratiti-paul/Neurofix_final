@@ -6,7 +6,7 @@
 
 .navbar {
     background-color: #afccd6; 
-    /* border: none; */
+    border: none;
     padding: 15px 20px;
     width: 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -35,13 +35,13 @@
     /* padding-left: 0px;
     margin-left: 0; 
     padding-left: 0; */
-    font-size: 50px
+    font-size: 6rem;
 }
 
 
 .logo {
     color: #333333;
-    font-size: 28px;
+    font-size: 3rem;
     font-weight: bold;
 }
 
@@ -55,12 +55,13 @@
 
 .nav-item {
     list-style: none;
+    font-size: 2rem;
 }
 
 .nav-links {
     color: #333333;
     text-decoration: none;
-    font-size: 18px;
+    /* font-size: 18px; */
 }
 
 .nav-links:hover {
