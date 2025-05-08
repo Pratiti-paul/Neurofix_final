@@ -1,37 +1,54 @@
-/* QuoteGenerator.css */
+.quote-generator-section {
+  padding: 80px 20px 100px;
+  text-align: center;
+}
+
+.quote-heading {
+  font-size: 60px;
+  color: #2b235b;
+  font-family: Georgia;
+  position: relative;
+}
+
+.quote-subheading{
+  font-family: Georgia;
+  font-size: 35px;
+  color: #4c408e;
+}
 
 .generator-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .mood-selector {
-    margin-bottom: 20px;
-  }
-  
-  .select-mood {
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    outline: none;
-    transition: border-color 0.3s ease;
-  }
-  
-  .select-mood:focus {
-    border-color: #ff69b4;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mood-selector {
+  margin-bottom: 20px;
+  display: flex;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.select-mood{
+  font-size: 25px;  
+  padding: 10px;
+  border-radius: 10px;
+  font-family: Georgia;
+}
+ 
   .generate-button {
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 20px 20px;
+    font-size: 30px;
     background-color: #ff69b4;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 400px;
+    font-family: Georgia;
   }
   
   .generate-button:hover {
@@ -39,18 +56,13 @@
     transform: scale(1.05);
   }
   
-  .generate-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
   .quote-display {
     margin-top: 40px;
-    font-size: 22px;
+    font-size: 40px;
     font-style: italic;
-    color: #555;
-    padding: 0 20px;
-    max-width: 500px;
+    color: #423d3d;
+    padding: 10px 20px;
+    /* max-width: 500px; */
     text-align: center;
   }
   

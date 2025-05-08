@@ -9,6 +9,7 @@ function Moodify() {
   return (
     <div>
       <div ref={scrollRef} className="tracker-intro">
+        <h1 className='heading'>Track your mood now!!</h1>
         <p className="tracker-text">
           Start by logging your daily mood below. Click on any date to select how you're feeling...
         </p>

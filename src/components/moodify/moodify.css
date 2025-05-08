@@ -8,6 +8,7 @@
     text-align: center;
   }
   
+
   .tracker-heading {
     font-size: 60px;
     color: #a90707;
@@ -105,16 +106,3 @@
 
 
 
-.quote-generator-section {
-    padding: 80px 20px 100px;
-    /* background: linear-gradient(to bottom, #f5b6d1 0%, #ffffff 100%); */
-    text-align: center;
-  }
-  
-  .quote-heading {
-    font-size: 70px;
-    color: #332c5b;
-    font-family: Georgia, serif;
-    margin-bottom: 30px;
-    position: relative;
-  }
