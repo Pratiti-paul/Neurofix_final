@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function About() {
     return (
       <div>
-        <h2>About Page</h2>
+        <h2>In Progress</h2>
       </div>
     );
   }
