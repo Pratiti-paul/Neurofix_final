@@ -29,10 +29,7 @@ function Home() {
               className="calm-player"
             />
           </div>
-
-          {/* <div className="start-button-wrapper">
-            <StartButton scrollToTarget={handleScroll} />
-          </div> */}
+\
        
       <div ref={scrollRef}></div>
       <div className="home-quote">
@@ -49,10 +46,6 @@ function Home() {
 
       </div>
     </div>
-
-    {/* <div className="start-button-wrapper">
-            <StartButton scrollToTarget={handleScroll} />
-    </div> */}
     </div>
 </div>
   );

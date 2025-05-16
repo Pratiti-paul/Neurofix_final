@@ -1,27 +1,23 @@
 .calendar-container {
-  background-color: #dca5ce;
+  background-color: #F7F5EA; /* off-white calendar bg */
   padding: 30px;
   border-radius: 20px;
   max-width: 650px;
-  height: 500px;
   width: 100%;
   height: 100%;
+  /* Removed fixed height for flexibility */
 }
 
-
-.calendar-section{
-  padding-top:70px;
-  padding-bottom: 40px;
-  display: flex;
-}
 .calendar-container:hover {
-  box-shadow: 0 0 15px rgba(255, 105, 180, 0.791);;
+  box-shadow: 0 0 15px rgba(139, 170, 127, 0.7); /* subtle green glow */
 }
 
 .react-calendar {
   font-size: 30px;
   width: 100%;
   border: none;
+  color: #2F3B28; /* dark green text */
+  font-family: 'Franklin Gothic Medium', sans-serif;
 }
 
 .react-calendar__tile {
@@ -30,66 +26,55 @@
   transition: background 0.3s ease;
   position: relative;
   padding: 5px;
+  color: #2F3B28; /* dark green date numbers */
 }
 
 .react-calendar__tile--active {
   background: transparent !important;
-  color: inherit;
+  color: #2F3B28;
   box-shadow: none;
 }
 
-
-
-
-.react-calendar__navigation__label{
+.react-calendar__navigation__label {
   font-size: 20px;
-  font-family: 'Franklin Gothic Medium';
+  font-family: 'Franklin Gothic Medium', sans-serif;
+  color: #2F3B28; /* dark green */
 }
-
-
-
 .tile-happy {
-  background-color: #0be825bd;
+  background-color: #8BAA7F; /* soft green */
+  color: #fff;
 }
 
 .tile-sad {
-  background-color: #db2020a5;
+  background-color: #D2A68D; /* muted warm brownish */
+  color: #2F3B28; /* dark green text */
 }
 
 .tile-anxious {
-  background-color: #33d9dfb3;
+  background-color: #E07A70; /* soft red */
+  color: #fff;
 }
 
 .tile-neutral {
-  background-color: #ebeb08c7;
+  background-color: #C7D3A4; /* muted light olive green */
+  color: #2F3B28;
 }
 
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
+/* Modal styling updated with greenish pastel theme */
 
 .modal {
-  background: #fff;
+  background: #BCC4AA; /* muted green background */
   padding: 30px;
   border-radius: 16px;
   text-align: center;
   width: 300px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(47, 59, 40, 0.3);
+  color: #2F3B28;
 }
 
 .modal h3 {
   margin-bottom: 20px;
-  color: #333;
+  color: #2F3B28;
 }
 
 .modal button {
@@ -100,17 +85,18 @@
   border: none;
   border-radius: 8px;
   font-size: 16px;
-  background-color: #e1bee7;
-  color: #333;
+  background-color: #8BAA7F; /* green */
+  color: #fff;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .modal button:hover {
-  background-color: #ce93d8;
+  background-color: #6E8864; /* darker green */
 }
 
 .cancel-button {
-  background-color: #ffcdd2 !important;
+  background-color: #E9E2B8 !important; /* pale yellow */
+  color: #2F3B28 !important;
+  font-weight: 600;
 }
-

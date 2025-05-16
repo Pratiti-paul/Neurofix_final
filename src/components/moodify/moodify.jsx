@@ -1,6 +1,6 @@
 import React from 'react';
 import MoodCalendar from "../moodcalendar/moodcalendar"; 
-import QuoteGenerator from "../QuoteGenerator/QuoteGenerator";
+import MoodAvatar from '../../assets/mood-avatar.png';
 
 import './moodify.css'; 
 
@@ -8,16 +8,25 @@ function Moodify() {
   const scrollRef = React.useRef(null);
   return (
     <div>
-      <div ref={scrollRef} className="tracker-intro">
-        <h1 className='heading'>Track your mood now!!</h1>
+      <div className='edit-mood'>
+        <div className="avatar-container">
+          <img src={MoodAvatar} alt="Mood Avatar" className="avatar-img" />
+        </div>
+        <div className="moodify-text">
+        <h1 className='headingmain'>Track your mood now!!</h1>
         <p className="tracker-text">
-          Start by logging your daily mood below. Click on any date to select how you're feeling...
+          Start by logging your daily mood below.
+        </p>
+        <p className="tracker-text2">
+          Click on any date to select how you're feeling.
         </p>
         <ul className="tracker-tips">
           <li>🎯 Tap a date to log your mood.</li>
           <li>📝 Add a short note if you like.</li>
           <li>📊 Track your growth and trends over time.</li>
         </ul>
+        </div>
+        </div>
 
         <div className="calendar-section">
           <MoodCalendar />
@@ -29,14 +38,6 @@ function Moodify() {
           </div>
         </div>
       </div>
-
-      <div className="quote-generator-section">
-        <h2 className="quote-heading">Feeling stuck?</h2>
-        <h2 className="quote-subheading">Get inspired with a random quote!</h2>
-        <QuoteGenerator />
-      </div>
-
-    </div>
   );
 }
 

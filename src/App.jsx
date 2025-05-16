@@ -21,9 +21,6 @@ function App() {
               <Route path="/about" element={<About />} />
             </Routes>
           </main>
-          {/* <div className="quote-generator">
-            <QuoteGenerator /> 
-          </div> */}
           <Footer />
         </div>
       </Router>

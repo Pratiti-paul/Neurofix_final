@@ -1,16 +1,17 @@
 .navbar {
-    background-color: #afccd6; 
+    background-color: #A8BBA2; 
     border: none;
     padding: 15px 20px;
     width: 100%;
     font-family: Georgia;
+    color: #444B44;
     
 }
 
 
 .nav-container {
-     display: flex;
-     align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
     position: relative;
 }
@@ -38,7 +39,6 @@
 
 
 .logo {
-    color: #333333;
     font-size: 3rem;
     font-weight: bold;
 }
@@ -57,7 +57,7 @@
 }
 
 .nav-links {
-    color: #333333;
+    color: #444B44;
     text-decoration: none;
 }
 

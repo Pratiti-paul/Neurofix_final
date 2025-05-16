@@ -1,63 +1,119 @@
-.home-container{
-    text-align: center;
-    /* padding-top: 150px; */
-    color: #2D2A3E ;
-    text-align: center;
-}
-
-home-page{
-
+.home-container {
+  text-align: center;
+  color: #2D2A3E;
+  padding: 0 20px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .maintag {
-    font-family: Georgia;
-    font-size: 150px;
-    color: #221958 ;
-    text-align: center;
-    padding-bottom: 10px;
-    padding-top: 100px;
+  font-family: Georgia, serif;
+  font-size: 10vw;
+  color: #3c473c;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 60px;
+  max-width: 100%;
+  word-wrap: break-word;
 }
-.subtitletag{
-    
-    font-family: 'Georgia';
-    font-size: 40px;
-    color: #311da2;
-    text-align: center;
-    padding-bottom: 90px;
-    padding-top: 20px;
 
+.subtitletag {
+  font-family: 'Georgia', serif;
+  font-size: clamp(20px, 3vw, 40px);
+  color: #444B44;
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .calm-animation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0;
-    
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  width: 100%;
+}
 
-  .calm-player {
-    width: 600px;
-    height: 600px;
-    padding-bottom: 30px;
-  }
- 
-  .home-quote {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.calm-player {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 1/1;
+  padding-bottom: 30px;
+}
 
+.home-quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.text-rotate {
+  font-size: clamp(30px, 6vw, 70px);
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  color: #444B44;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+@media (max-width: 1024px) {
+  .maintag {
+    padding-top: 40px;
   }
   
+  .subtitletag {
+    padding-bottom: 40px;
+  }
   
   .text-rotate {
-    font-size: 70px;
-    font-family: 'Georgia';
-    font-weight: bold;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .maintag {
     padding-top: 30px;
-    padding-bottom: 100px;
-    color: #0d4575;
   }
   
+  .subtitletag {
+    padding-bottom: 30px;
+  }
+  
+  .calm-player {
+    max-width: 450px;
+  }
+  
+  .text-rotate {
+    padding-bottom: 40px;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .maintag {
+    padding-top: 20px;
+  }
+  
+  .subtitletag {
+    padding-bottom: 20px;
+  }
+  
+  .calm-player {
+    max-width: 300px;
+  }
+  
+  .text-rotate {
+    padding-bottom: 30px;
+    padding-top: 15px;
+  }
+}
