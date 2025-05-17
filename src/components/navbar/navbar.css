@@ -1,3 +1,4 @@
+/* Navbar container */
 .navbar {
     background-color: #A8BBA2; 
     border: none;
@@ -5,10 +6,11 @@
     width: 100%;
     font-family: Georgia;
     color: #444B44;
-    
+    position: relative;
+    z-index: 999;
 }
 
-
+/* Flex container for nav content */
 .nav-container {
     display: flex;
     align-items: center;
@@ -16,41 +18,30 @@
     position: relative;
 }
 
-.nav-menu {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-      
-
-.ul.nav-menu {
-    display: flex;
-}
-
+/* Logo section */
 .logo-menu {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    font-size: 6rem;
 }
-
 
 .logo {
     font-size: 3rem;
     font-weight: bold;
+    transition: font-size 0.3s ease;
 }
 
-/* .nav-menu {
+/* Navigation menu (desktop default) */
+.nav-menu {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 30px;
-    
-} */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
+/* Nav item and link styles */
 .nav-item {
     list-style: none;
     font-size: 2rem;
@@ -65,20 +56,32 @@
     color: #f8fffa;
 } 
 
-
-
+/* Hamburger menu icon (hidden by default) */
 .hamburger {
-    display: none; 
-    font-size: 24px;
+    display: none;
+    font-size: 2rem;
     color: #333333;
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 .hamburger:hover {
     color: #f5f8f6;
 }
 
+/* Responsive styles for screens <= 768px */
 @media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
     .hamburger {
         display: block;
     }
@@ -88,11 +91,12 @@
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 60px;
+        top: 70px;
         left: 0;
         background-color: #f5b6d1;
         padding: 20px;
-        z-index: 1000;
+        text-align: center;
+        transform: none;
     }
 
     .nav-menu.active {
