@@ -1,81 +1,85 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import './meditationtimer.css';
 
-const MeditationTracker = () => {
-  const [minutesInput, setMinutesInput] = useState(10);
-  const [secondsInput, setSecondsInput] = useState(0);
-  const [initialTime, setInitialTime] = useState(10 * 60);
-  const [timeLeft, setTimeLeft] = useState(10 * 60);
-  const [isRunning, setIsRunning] = useState(false);
+const MeditationTimer = () => {
+  const [minutes, setMinutes] = useState(10);
+  const [seconds, setSeconds] = useState(0);
+  const [timeLeft, setTimeLeft] = useState(600);
+  const [isActive, setIsActive] = useState(false);
   const timerRef = useRef(null);
 
-  useEffect(() => {
-    if (isRunning && timeLeft > 0) {
+  const formatTime = (time) => {
+    const mins = String(Math.floor(time / 60)).padStart(2, '0');
+    const secs = String(time % 60).padStart(2, '0');
+    return `${mins}:${secs}`;
+  };
+
+  const handleSet = () => {
+    const total = parseInt(minutes) * 60 + parseInt(seconds);
+    setTimeLeft(total);
+    setIsActive(false);
+    clearInterval(timerRef.current);
+  };
+
+  const handleStart = () => {
+    if (timeLeft > 0 && !isActive) {
+      setIsActive(true);
       timerRef.current = setInterval(() => {
-        setTimeLeft(prev => prev - 1);
+        setTimeLeft((prev) => {
+          if (prev <= 1) {
+            clearInterval(timerRef.current);
+            setIsActive(false);
+            return 0;
+          }
+          return prev - 1;
+        });
       }, 1000);
-    } else {
-      clearInterval(timerRef.current);
     }
-
-    return () => clearInterval(timerRef.current);
-  }, [isRunning, timeLeft]);
-
-  const formatTime = (secs) => {
-    const minutes = Math.floor(secs / 60);
-    const seconds = secs % 60;
-    return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
   };
 
-  const handleTimeSet = () => {
-    const totalSeconds = parseInt(minutesInput) * 60 + parseInt(secondsInput);
-    setInitialTime(totalSeconds);
-    setTimeLeft(totalSeconds);
-    setIsRunning(false);
+  const handlePause = () => {
+    setIsActive(false);
+    clearInterval(timerRef.current);
   };
 
-  const resetTimer = () => {
-    setIsRunning(false);
-    setTimeLeft(initialTime);
+  const handleReset = () => {
+    setIsActive(false);
+    clearInterval(timerRef.current);
+    setTimeLeft(minutes * 60 + seconds);
   };
 
   return (
-    <div className="meditation-tracker">
-      <h2 className='header'>Meditation Timer</h2>
-
-      <div className="time-setter">
-        <label>Set Time:</label>
+    <div className="timer-container">
+      <h2 className="timer-heading">Meditation Timer</h2>
+      <div className="input-row">
+        <label className="timer-label1">Set Time:&nbsp;</label>
         <input
           type="number"
+          value={minutes}
+          onChange={(e) => setMinutes(e.target.value)}
+          className="timer-input1"
           min="0"
-          value={minutesInput}
-          onChange={(e) => setMinutesInput(e.target.value)}
-          disabled={isRunning}
-        /> min
+        />
+        <span className="timer-label2">min</span>
         <input
           type="number"
+          value={seconds}
+          onChange={(e) => setSeconds(e.target.value)}
+          className="timer-input2"
           min="0"
           max="59"
-          value={secondsInput}
-          onChange={(e) => setSecondsInput(e.target.value)}
-          disabled={isRunning}
-        /> sec
-        <button onClick={handleTimeSet} disabled={isRunning}>
-          Set
-        </button>
+        />
+        <span className="timer-label3">sec</span>
+        <button onClick={handleSet} className="timer-button">Set</button>
       </div>
-
-      <div className="timer-display">{formatTime(timeLeft)}</div>
-
-      <div className="controls">
-        <button onClick={() => setIsRunning(true)} disabled={isRunning || timeLeft === 0}>Start</button>
-        <button onClick={() => setIsRunning(false)} disabled={!isRunning}>Pause</button>
-        <button onClick={resetTimer}>Reset</button>
+      <div className="time-display">{formatTime(timeLeft)}</div>
+      <div className="button-row">
+        <button onClick={handleStart} className="timer-button">Start</button>
+        <button onClick={handlePause} className="timer-button">Pause</button>
+        <button onClick={handleReset} className="timer-button">Reset</button>
       </div>
-
-      {timeLeft === 0 && <p className="done-message">🧘 Time's up! Great job!</p>}
     </div>
   );
 };
 
-export default MeditationTracker;
+export default MeditationTimer;

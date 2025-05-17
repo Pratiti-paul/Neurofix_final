@@ -29,13 +29,9 @@ function Home() {
               className="calm-player"
             />
           </div>
-\
        
       <div ref={scrollRef}></div>
       <div className="home-quote">
-        {/* <h2 className="quote-heading">Why NeuroFix?</h2>
-        <h2 className="quote-subheading">Because your mind matters.</h2>
-        <p className="quote-text">Here you can</p> */}
         <RotatingText texts={[
           "Moodcalender and tracking",
           "Generate quotes based on your mood",

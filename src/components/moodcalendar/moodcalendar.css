@@ -1,23 +1,22 @@
 .calendar-container {
-  background-color: #F7F5EA; /* off-white calendar bg */
+  background-color: #F7F5EA; 
   padding: 30px;
   border-radius: 20px;
   max-width: 650px;
   width: 100%;
   height: 100%;
-  /* Removed fixed height for flexibility */
 }
 
 .calendar-container:hover {
-  box-shadow: 0 0 15px rgba(139, 170, 127, 0.7); /* subtle green glow */
+  box-shadow: 0 0 15px rgba(139, 170, 127, 0.7); 
 }
 
 .react-calendar {
   font-size: 30px;
   width: 100%;
   border: none;
-  color: #2F3B28; /* dark green text */
-  font-family: 'Franklin Gothic Medium', sans-serif;
+  color: #2F3B28; 
+  font-family: 'Franklin Gothic Medium';
 }
 
 .react-calendar__tile {
@@ -26,7 +25,7 @@
   transition: background 0.3s ease;
   position: relative;
   padding: 5px;
-  color: #2F3B28; /* dark green date numbers */
+  color: #2F3B28; 
 }
 
 .react-calendar__tile--active {
@@ -46,24 +45,21 @@
 }
 
 .tile-sad {
-  background-color: #D2A68D; /* muted warm brownish */
-  color: #2F3B28; /* dark green text */
+  background-color: #D2A68D; 
+  color: #2F3B28; 
 }
 
 .tile-anxious {
-  background-color: #E07A70; /* soft red */
+  background-color: #E07A70; 
   color: #fff;
 }
 
 .tile-neutral {
-  background-color: #C7D3A4; /* muted light olive green */
+  background-color: #C7D3A4; 
   color: #2F3B28;
 }
-
-/* Modal styling updated with greenish pastel theme */
-
 .modal {
-  background: #BCC4AA; /* muted green background */
+  background: #BCC4AA; 
   padding: 30px;
   border-radius: 16px;
   text-align: center;
