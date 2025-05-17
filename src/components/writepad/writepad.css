@@ -7,6 +7,10 @@
     
   }
 
+.journal-container :hover{
+  transform: translateY(-5px);
+}
+
 .journal-container h1{
   color: #3c473c;
   font-size: 80px;
@@ -24,6 +28,7 @@
     background-color: #A8BBA2;
   }
 
+ 
   .journal-textarea::placeholder {
      font-size: 35px;
     font-family: 'Franklin Gothic Medium';
