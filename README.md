@@ -6,10 +6,6 @@ This project is a web-based application designed to help users track and manage 
 
 - **Mood Tracking**: Log your daily mood and visualize trends over time.
 - **Journaling**: Write and save personal journal entries to reflect on your thoughts and feelings.
-- **Resource Library**: Access curated articles, videos, and tips for mental health improvement.
-- **Reminders**: Set reminders to log your mood or write journal entries.
-- **Secure Data**: All user data is securely stored and protected.
-
 ## Technologies Used
 
 - **Frontend**: React with Vite for fast development and HMR.
