@@ -10,7 +10,7 @@
     z-index: 999;
 }
 
-/* Flex container for nav content */
+
 .nav-container {
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@
     position: relative;
 }
 
-/* Logo section */
+
 .logo-menu {
     display: flex;
     align-items: center;
@@ -31,7 +31,6 @@
     transition: font-size 0.3s ease;
 }
 
-/* Navigation menu (desktop default) */
 .nav-menu {
     display: flex;
     align-items: center;
@@ -41,7 +40,6 @@
     transform: translateX(-50%);
 }
 
-/* Nav item and link styles */
 .nav-item {
     list-style: none;
     font-size: 2rem;
@@ -55,6 +53,35 @@
 .nav-links:hover {
     color: #f8fffa;
 } 
+
+.login-signup {
+  margin-left: auto;
+}
+
+.login-btn {
+  background-color: #444B44;
+  color: #a5b6a5;
+  text-decoration: none;
+  font-size: 20px;
+  width: 250px;
+  height: 60px;
+  font-family: Georgia;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background 0.3s;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 50px;
+  cursor: pointer;
+
+}
+
+.login-btn:hover {
+  background-color: #e1eae5;
+}
 
 /* Hamburger menu icon (hidden by default) */
 .hamburger {
