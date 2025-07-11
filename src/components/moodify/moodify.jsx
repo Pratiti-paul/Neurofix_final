@@ -1,6 +1,7 @@
 import React from 'react';
 import MoodCalendar from "../moodcalendar/moodcalendar"; 
-import MoodAvatar from '../../assets/mood-avatar.png';
+import AvatarPic from '../../assets/avatarpic.png';
+
 
 import './moodify.css'; 
 
@@ -10,7 +11,7 @@ function Moodify() {
     <div>
       <div className='edit-mood'>
         <div className="avatar-container">
-          <img src={MoodAvatar} alt="Mood Avatar" className="avatar-img" />
+          <img src={AvatarPic} alt="Avatar" className="avatar-image" />
         </div>
         <div className="moodify-text">
         <h1 className='headingmain'>Track your mood now!!</h1>
