@@ -39,7 +39,7 @@ function About() {
           <button className="tag4">Submit</button>
         </div>
         <div className="feedbackimage">
-          <img src={feedbackImg} alt="Feedback Illustration" />
+          <img src={feedbackImg} alt="Feedback Illustration"/>
         </div>
       </div>
 

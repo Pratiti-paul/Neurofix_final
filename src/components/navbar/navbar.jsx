@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
-import LoginModal from "../Login/LoginModal";
+import LoginModal from "../login/LoginModal";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
