@@ -1,4 +1,4 @@
-/* Navbar container */
+
 .navbar {
     background-color: #A8BBA2; 
     border: none;
@@ -83,7 +83,6 @@
   background-color: #e1eae5;
 }
 
-/* Hamburger menu icon (hidden by default) */
 .hamburger {
     display: none;
     font-size: 2rem;
@@ -98,7 +97,7 @@
     color: #f5f8f6;
 }
 
-/* Responsive styles for screens <= 768px */
+
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;

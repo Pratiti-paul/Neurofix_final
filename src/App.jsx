@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Navbar /> {/* ⬅️ Includes the Login/Signup modal logic */}
+        <Navbar />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

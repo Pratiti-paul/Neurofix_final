@@ -90,11 +90,11 @@
 }
 
 .modal button:hover {
-  background-color: #6E8864; /* darker green */
+  background-color: #6E8864; 
 }
 
 .cancel-button {
-  background-color: #E9E2B8 !important; /* pale yellow */
+  background-color: #E9E2B8 !important; 
   color: #2F3B28 !important;
   font-weight: 600;
 }
