@@ -1,63 +1,80 @@
+/* Writepad Global Container */
 .journal-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    
-  }
-
-.journal-container :hover{
-  transform: translateY(-5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
 }
 
-.journal-container h1{
-  color: #3c473c;
-  font-size: 80px;
-  font-family:'Franklin Gothic Medium';
+.heading {
+  color: var(--text-color);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-family: var(--heading-font);
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  text-align: center;
 }
-  
-  .journal-textarea {
-    width: 80%;
-    height: 500px;
-    padding: 20px 20px; 
-    margin-bottom: 30px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    resize: vertical;
-    background-color: #A8BBA2;
-  }
 
- 
-  .journal-textarea::placeholder {
-     font-size: 35px;
-    font-family: 'Franklin Gothic Medium';
-    color: #171c17;
-  }
+.journal-textarea {
+  width: 100%;
+  height: 450px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  resize: vertical;
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+  font-family: 'Inter', var(--font-family);
+  font-size: 1.15rem;
+  color: var(--text-color);
+  line-height: 1.8;
+  transition: var(--transition);
+}
 
+.journal-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(125, 167, 225, 0.15);
+  border-color: var(--primary-color);
+}
 
-   .journal-button {
-    background-color: #3c473c;
-    color: #f4f7f5;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 40px;
-    width: 300px;
-    margin-bottom: 40px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: 'Franklin Gothic Medium';
-    font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
-  }
+.journal-textarea::placeholder {
+  font-size: 1.5rem;
+  font-family: var(--heading-font);
+  color: #D1D5DB;
+  /* Light grey placeholder */
+  font-weight: 400;
+  text-align: center;
+  padding-top: 6rem;
+}
 
-  .journal-button:hover {
-    background-color: #4a654a;
-    color: #f5f5f5;
+/* Reset text align for typing */
+.journal-textarea:not(:placeholder-shown) {
+  text-align: left;
+}
 
-  }
+.journal-button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 3.5rem;
+  height: auto;
+  width: auto;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-family: var(--font-family);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 10px rgba(125, 167, 225, 0.3);
+}
 
+.journal-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(125, 167, 225, 0.4);
+}

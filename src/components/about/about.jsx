@@ -32,7 +32,7 @@ function About() {
 
      <div className="cardcontainer3">
         <div className="feedbackbox">
-          <h2 className="maintag">Feedback Portal 💬</h2>
+          <h2 className="maintag">Feedback Portal</h2>
           <input className="tag1" type="text" placeholder="Your Name" />
           <input className="tag2" type="email" placeholder="Your Email" />
           <textarea className="tag3" placeholder="Your feedback..."></textarea>

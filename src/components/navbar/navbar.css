@@ -1,136 +1,104 @@
-
 .navbar {
-    background-color: #A8BBA2; 
-    border: none;
-    padding: 15px 20px;
+    background-color: var(--card-bg);
+    padding: 1rem 2rem;
     width: 100%;
-    font-family: Georgia;
-    color: #444B44;
-    position: relative;
-    z-index: 999;
+    color: var(--text-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--border-color);
 }
-
 
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-
 
 .logo-menu {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
 }
 
 .logo {
-    font-size: 3rem;
-    font-weight: bold;
-    transition: font-size 0.3s ease;
+    font-size: 1.5rem;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 30px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    gap: 2.5rem;
 }
 
 .nav-item {
-    list-style: none;
-    font-size: 2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
 }
 
 .nav-links {
-    color: #444B44;
-    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--transition);
 }
 
-.nav-links:hover {
-    color: #f8fffa;
-} 
+.nav-links:hover,
+.nav-links.active {
+    color: var(--primary-color);
+}
 
 .login-signup {
-  margin-left: auto;
+    display: flex;
 }
 
 .login-btn {
-  background-color: #444B44;
-  color: #a5b6a5;
-  text-decoration: none;
-  font-size: 20px;
-  width: 250px;
-  height: 60px;
-  font-family: Georgia;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: background 0.3s;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: 50px;
-  cursor: pointer;
-
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px -1px rgba(125, 167, 225, 0.3);
 }
 
 .login-btn:hover {
-  background-color: #e1eae5;
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px -1px rgba(125, 167, 225, 0.4);
 }
 
 .hamburger {
     display: none;
-    font-size: 2rem;
-    color: #333333;
+    font-size: 1.5rem;
+    color: var(--text-color);
     cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
 }
-
-.hamburger:hover {
-    color: #f5f8f6;
-}
-
 
 @media (max-width: 768px) {
-    .nav-container {
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
         flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .logo {
-        font-size: 2rem;
+        background-color: var(--card-bg);
+        box-shadow: var(--shadow);
+        padding: 1.5rem 0;
+        border-bottom: 1px solid var(--border-color);
     }
 
     .hamburger {
         display: block;
     }
 
-    .nav-menu {
+    .login-signup {
         display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background-color: #f5b6d1;
-        padding: 20px;
-        text-align: center;
-        transform: none;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .nav-links {
-        font-size: 20px;
-        margin-bottom: 15px;
     }
 }

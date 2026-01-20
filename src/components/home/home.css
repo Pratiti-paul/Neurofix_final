@@ -1,119 +1,66 @@
+/* Home CSS Refactor */
+
 .home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  color: #2D2A3E;
-  padding: 0 20px;
-  max-width: 100%;
-  overflow-x: hidden;
+  width: 100%;
+}
+
+.text-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
 }
 
 .maintag {
-  font-family: Georgia, serif;
-  font-size: 7vw;
-  color: #3c473c;
-  text-align: center;
-  padding-bottom: 10px;
-  padding-top: 60px;
-  max-width: 100%;
-  word-wrap: break-word;
+  font-family: var(--heading-font);
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  color: #2D3748;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 
 .subtitletag {
-  font-family: 'Georgia', serif;
-  font-size: clamp(20px, 3vw, 40px);
-  color: #444B44;
-  text-align: center;
-  padding-bottom: 50px;
-  padding-top: 20px;
-  max-width: 90%;
-  margin: 0 auto;
+  font-family: var(--font-family);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
 }
 
 .calm-animation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem 0;
   width: 100%;
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  opacity: 0.9;
+  /* Slightly softer */
 }
 
 .calm-player {
   width: 100%;
-  max-width: 600px;
   height: auto;
-  aspect-ratio: 1/1;
-  padding-bottom: 30px;
 }
 
 .home-quote {
+  margin-top: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  color: var(--primary-color);
+  min-height: 120px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  width: 100%;
-  max-width: 90%;
-  margin: 0 auto;
+  align-items: center;
 }
 
-.text-rotate {
-  font-size: 80px;
-  font-family: 'Georgia', serif;
-  font-weight: bold;
-  padding-top: 30px;
-  padding-bottom: 60px;
-  color: #444B44;
-  max-width: 100%;
-  word-wrap: break-word;
-}
-
-@media (max-width: 1024px) {
-  .maintag {
-    padding-top: 40px;
-  }
-  
-  .subtitletag {
-    padding-bottom: 40px;
-  }
-  
-  .text-rotate {
-    padding-bottom: 50px;
-  }
-}
-
-@media (max-width: 768px) {
-  .maintag {
-    padding-top: 30px;
-  }
-  
-  .subtitletag {
-    padding-bottom: 30px;
-  }
-  
-  .calm-player {
-    max-width: 450px;
-  }
-  
-  .text-rotate {
-    padding-bottom: 40px;
-    padding-top: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .maintag {
-    padding-top: 20px;
-  }
-  
-  .subtitletag {
-    padding-bottom: 20px;
-  }
-  
-  .calm-player {
-    max-width: 300px;
-  }
-  
-  .text-rotate {
-    padding-bottom: 30px;
-    padding-top: 15px;
-  }
+/* Ensure RotatingText component inside .home-quote picks up styles */
+.home-quote .text-rotate {
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+  font-size: inherit;
+  padding: 0;
 }

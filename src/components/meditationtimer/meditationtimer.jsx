@@ -6,6 +6,7 @@ const MeditationTimer = () => {
   const [seconds, setSeconds] = useState(0);
   const [timeLeft, setTimeLeft] = useState(600);
   const [isActive, setIsActive] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
   const timerRef = useRef(null);
 
   const formatTime = (time) => {
@@ -18,17 +19,20 @@ const MeditationTimer = () => {
     const total = parseInt(minutes) * 60 + parseInt(seconds);
     setTimeLeft(total);
     setIsActive(false);
+    setShowPopup(false);
     clearInterval(timerRef.current);
   };
 
   const handleStart = () => {
     if (timeLeft > 0 && !isActive) {
       setIsActive(true);
+      setShowPopup(false);
       timerRef.current = setInterval(() => {
         setTimeLeft((prev) => {
           if (prev <= 1) {
             clearInterval(timerRef.current);
             setIsActive(false);
+            setShowPopup(true);
             return 0;
           }
           return prev - 1;
@@ -44,8 +48,13 @@ const MeditationTimer = () => {
 
   const handleReset = () => {
     setIsActive(false);
+    setShowPopup(false);
     clearInterval(timerRef.current);
     setTimeLeft(minutes * 60 + seconds);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
   };
 
   return (
@@ -78,6 +87,16 @@ const MeditationTimer = () => {
         <button onClick={handlePause} className="timer-button">Pause</button>
         <button onClick={handleReset} className="timer-button">Reset</button>
       </div>
+
+      {showPopup && (
+        <div className="timer-popup-overlay">
+          <div className="timer-popup">
+            <h3>Time's Up! 🧘</h3>
+            <p>Great job taking time for yourself.</p>
+            <button onClick={closePopup}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

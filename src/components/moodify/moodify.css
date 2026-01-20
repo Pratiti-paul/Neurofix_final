@@ -1,124 +1,142 @@
-.avatar-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 100px;
+.moodify-container {
+  /* Wrapper if needed */
 }
 
-.edit-mood{
+.edit-mood {
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
-  gap: 300px;
-  padding-left: 250px;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
-.moodify-text{
-  font-family: 'Franklin Gothic Medium';
-  margin-top: 20px;
-  margin-bottom: 20px;
+.avatar-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 280px;
 }
- .headingmain {
-    font-size: 90px;
-    font-family: 'Franklin Gothic Medium';
-    color: #3c473c;;
-    margin-bottom: 20px;
-  }
 
+.avatar-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  border: 4px solid var(--card-bg);
+}
 
-  
-  .tracker-text {
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: #252b25;
-    font-family: 'Franklin Gothic Medium';
-  }
+.moodify-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+  font-family: var(--font-family);
+}
 
-  .tracker-text2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: #252b25;
-    font-family: 'Franklin Gothic Medium';
+.headingmain {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-family: var(--heading-font);
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
 
-  }
-  
-  .tracker-tips {
-    list-style: none;
-    font-family: 'Franklin Gothic Medium';
-    font-size: 30px;
-    color: #252b25;
-    margin-top: 10px;
-  }
-  
-  .tracker-tips li {
-    margin-bottom: 10px;
-  }
-  
-  .calendar-section {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-  }
+.tracker-text,
+.tracker-text2 {
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
 
-  .legend {
-    display: flex;
+.tracker-tips {
+  list-style: none;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--secondary-color);
+}
+
+.tracker-tips li {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.calendar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin: 2rem auto 6rem;
+  max-width: 1000px;
+  padding: 0 1rem;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  padding: 1.5rem 3rem;
+  background: var(--card-bg);
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.legend-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Matching mood colors */
+.legend-box.happy {
+  background-color: var(--mood-happy);
+}
+
+.legend-box.sad {
+  background-color: var(--mood-sad);
+}
+
+.legend-box.anxious {
+  background-color: var(--mood-anxious);
+}
+
+.legend-box.neutral {
+  background-color: var(--mood-neutral);
+}
+
+@media (max-width: 768px) {
+  .edit-mood {
     flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-    padding-left: 250px;
-    padding-top: 100px;
-    
+    text-align: center;
+    gap: 3rem;
+    padding: 2rem 1rem;
   }
 
-
-   
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 35px;
-    font-family: 'Franklin Gothic Medium';
+  .moodify-text {
+    text-align: center;
   }
-
-  .legend-box {
-    width: 20px;
-    height: 20px;
-    border-radius: 4px;
-  }
-
-
-  
-  .legend-box.happy {
-    background-color: #0be825bd;
-  }
-
-.legend-box.happy:hover {
-    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
 }
-  
-  .legend-box.sad {
-    background-color: #db2020a5;
-  }
-  
-  .legend-box.sad:hover {
-    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
-}
-  .legend-box.anxious {
-    background-color: #33d9dfb3;
-  }
-  
-  .legend-box.anxious:hover {
-    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
-}
-
-  .legend-box.neutral {
-    background-color: #ebeb08c7;
-  }
-
-  .legend-box.neutral:hover {
-    box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
-}
-
-
-
-

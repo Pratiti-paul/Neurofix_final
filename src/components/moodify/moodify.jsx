@@ -6,7 +6,6 @@ import AvatarPic from '../../assets/avatarpic.png';
 import './moodify.css'; 
 
 function Moodify() {
-  const scrollRef = React.useRef(null);
   return (
     <div>
       <div className='edit-mood'>

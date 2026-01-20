@@ -8,9 +8,6 @@ import RotatingText from '../RotatingText/RotatingText';
 function Home() {
   const scrollRef = useRef(null);
 
-  const handleScroll = () => {
-    scrollRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <div className="home-page">

@@ -1,0 +1,23 @@
+.journal-container {
+    margin: 2rem auto;
+    padding: 0 1rem;
+    max-width: 1200px;
+}
+
+.meditationtimer {
+    margin: 2rem auto;
+    padding: 0 1rem;
+    max-width: 1200px;
+}
+
+/* If we want them side-by-side on large screens */
+@media (min-width: 1024px) {
+    /* Actually, usually these are stacked sections. 
+     If user wants side by side, we need a wrap div in JSX. 
+     But JSX has them as siblings divs. 
+     We can target the parent div in Selfcare.jsx if we gave it a class. 
+     Currently it is just <div>. 
+     I will assume stacked is fine for "minimal flowless". 
+     But I will add generous spacing. 
+  */
+}
