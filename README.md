@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>NeuroFix - Mental Wellness App</title>
-</head>
-<body style="font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #2E3440; background-color: #FAF7F0; padding: 24px;">
-
-  <h1>🧠 NeuroFix</h1>
+<h1>NeuroFix</h1>
 
   <p>
     <strong>NeuroFix</strong> is a responsive mental wellness web application that helps users
@@ -16,7 +8,7 @@
 
   <hr />
 
-  <h2>🌿 Key Features</h2>
+  <h2>Key Features</h2>
   <ul>
     <li>Mood tracking with interactive calendar</li>
     <li>Personal journaling space</li>
@@ -36,7 +28,7 @@
 
   <hr />
 
-  <h2>🚀 Getting Started</h2>
+  <h2>Getting Started</h2>
   <pre>
 git clone https://github.com/your-username/neurofix.git
 cd neurofix
@@ -48,7 +40,7 @@ npm start
 
   <hr />
 
-  <h2>📌 Notes</h2>
+  <h2>Notes</h2>
   <ul>
     <li>UI-focused project with fully working components</li>
     <li>Designed for portfolios, demos, and academic use</li>
@@ -56,8 +48,9 @@ npm start
   </ul>
 
   <hr />
-
-  <p>© 2025 NeuroFix. All rights reserved.</p>
+  
+<p>Made with ❤️ by Pratiti Paul 
+[GitHub](https://github.com/Pratiti-paul) </p>
 
 </body>
 </html>
