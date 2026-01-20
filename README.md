@@ -49,8 +49,8 @@ npm start
 
   <hr />
   
-<p>Made with ❤️ by Pratiti Paul 
-[GitHub](https://github.com/Pratiti-paul) </p>
+<p> Made with ❤️ by Pratiti Paul </p>
+<p> [GitHub](https://github.com/Pratiti-paul) </p>
 
 </body>
 </html>
